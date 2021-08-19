@@ -45,23 +45,53 @@ class S {
     );
   }
 
-  /// `Confirm`
-  String get pageHomeConfirm {
+  /// `Play 2048 Game flutter`
+  String get titleWelcome {
     return Intl.message(
-      'Confirm',
-      name: 'pageHomeConfirm',
+      'Play 2048 Game flutter',
+      name: 'titleWelcome',
       desc: '',
       args: [],
     );
   }
 
-  /// `Welcome {name}`
-  String pageHomeWelcome(Object name) {
+  /// `Join and get to the 2048 tile!`
+  String get titleWelDesc {
     return Intl.message(
-      'Welcome $name',
-      name: 'pageHomeWelcome',
+      'Join and get to the 2048 tile!',
+      name: 'titleWelDesc',
       desc: '',
-      args: [name],
+      args: [],
+    );
+  }
+
+  /// `BEST`
+  String get labelBest {
+    return Intl.message(
+      'BEST',
+      name: 'labelBest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `SCORE`
+  String get labelScore {
+    return Intl.message(
+      'SCORE',
+      name: 'labelScore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Game`
+  String get btnNewGame {
+    return Intl.message(
+      'New Game',
+      name: 'btnNewGame',
+      desc: '',
+      args: [],
     );
   }
 }

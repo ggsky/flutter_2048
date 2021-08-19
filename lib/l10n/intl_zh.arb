@@ -1,5 +1,8 @@
 {
     "titleName": "2048",
-    "pageHomeConfirm": "Confirm",
-    "pageHomeWelcome": "Welcome {name}"
+    "titleWelcome": "Play 2048 Game flutter",
+    "titleWelDesc": "欢迎使用2048小游戏。",
+    "labelBest": "最高得分",
+    "labelScore": "本次得分",
+    "btnNewGame": "重新开始"
 }

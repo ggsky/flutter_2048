@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import '../store/game_state.dart';
 import '../utils/screen.dart';
+
 /// 游戏格子背景
 class GameBg extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => GameBgState();
+  State<StatefulWidget> createState() => _GameBgState();
 }
 
-class GameBgState extends State<StatefulWidget> {
-
+class _GameBgState extends State<StatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return StoreConnector<GameState, GameBgProps>(
@@ -19,14 +19,18 @@ class GameBgState extends State<StatefulWidget> {
         mode: store.state.mode,
       ),
       builder: (context, vm) {
-        return Container(
-          padding: EdgeInsets.fromLTRB(vm.borderWidth, vm.borderWidth, 0, 0),
-          decoration: BoxDecoration(
-            color: const Color(0xffbbada0),
-            border: Border.all(color: Colors.transparent, width: 0),
-            borderRadius: BorderRadius.circular(5),
+        var width = Screen.stageWidth;
+        return Center(
+          child: Container(
+            width: width,
+            padding: EdgeInsets.fromLTRB(vm.borderWidth, vm.borderWidth, 0, 0),
+            decoration: BoxDecoration(
+              color: const Color(0xffbbada0),
+              border: Border.all(color: Colors.transparent, width: 0),
+              borderRadius: BorderRadius.circular(5),
+            ),
+            child: getGrid(vm),
           ),
-          child: getGrid(vm),
         );
       },
     );
@@ -63,9 +67,9 @@ class GameBgState extends State<StatefulWidget> {
 }
 
 class GameBgProps {
-  double borderWidth;
-  double blockWidth;
-  int mode;
+  double borderWidth; //边框大小
+  double blockWidth; //块大小
+  int mode; //游戏模式，3*3 4*4 6*6
 
   GameBgProps({this.borderWidth, this.blockWidth, this.mode});
 }

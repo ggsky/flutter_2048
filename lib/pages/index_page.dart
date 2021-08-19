@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_2048/service/gameInit.dart';
-import 'package:flutter_2048/views/blocks.dart';
-import 'package:flutter_2048/views/scores.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:redux/redux.dart';
 import 'package:redux_thunk/redux_thunk.dart';
+
+import 'package:flutter_2048/service/gameInit.dart';
+import 'package:flutter_2048/views/blocks.dart';
+import 'package:flutter_2048/views/scores.dart';
 import '../views/game_bg.dart';
 import '../views/mode_selector.dart';
 import '../views/playground.dart';

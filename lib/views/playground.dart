@@ -29,32 +29,34 @@ class Playground extends StatelessWidget {
       },
       builder: (context, props) {
         return props.end != true
-            ? GestureDetector(
-                onHorizontalDragStart: (evt) => onDragStart(evt, props),
-                onHorizontalDragEnd: (evt) => onHorizontalDragEnd(evt, props),
-                onVerticalDragStart: (evt) => onDragStart(evt, props),
-                onVerticalDragEnd: (evt) => onVerticalDragEnd(evt, props),
-                child: Container(
-                  color: Colors.transparent,
-                  height: Screen.stageWidth,
-                ),
-              )
-            : Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: Color.fromRGBO(255, 255, 255, 0.4)),
-                height: Screen.stageWidth,
-                child: Center(
-                  child: Text(
-                    'Game Over',
-                    style: TextStyle(
-                      fontSize: 50,
-                      color: Color(0xff776e65),
-                      fontWeight: FontWeight.bold,
-                    ),
+            ? Center(
+              child: GestureDetector(
+                  onHorizontalDragStart: (evt) => onDragStart(evt, props),
+                  onHorizontalDragEnd: (evt) => onHorizontalDragEnd(evt, props),
+                  onVerticalDragStart: (evt) => onDragStart(evt, props),
+                  onVerticalDragEnd: (evt) => onVerticalDragEnd(evt, props),
+                  child: Container(
+                    color: Colors.transparent,
+                    height: Screen.stageWidth,
                   ),
                 ),
-              );
+            )
+            : Center(child: Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      color: Color.fromRGBO(255, 255, 255, 0.4)),
+                  height: Screen.stageWidth,
+                  child: Center(
+                    child: Text(
+                      'Game Over',
+                      style: TextStyle(
+                        fontSize: 50,
+                        color: Color(0xff776e65),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),);
       },
     );
   }

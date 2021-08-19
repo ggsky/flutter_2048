@@ -19,12 +19,13 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static m0(name) => "Welcome ${name}";
-
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
-    "pageHomeConfirm" : MessageLookupByLibrary.simpleMessage("Confirm"),
-    "pageHomeWelcome" : m0,
-    "titleName" : MessageLookupByLibrary.simpleMessage("2048")
+    "btnNewGame" : MessageLookupByLibrary.simpleMessage("New Game"),
+    "labelBest" : MessageLookupByLibrary.simpleMessage("BEST"),
+    "labelScore" : MessageLookupByLibrary.simpleMessage("SCORE"),
+    "titleName" : MessageLookupByLibrary.simpleMessage("2048"),
+    "titleWelDesc" : MessageLookupByLibrary.simpleMessage("Join and get to the 2048 tile!"),
+    "titleWelcome" : MessageLookupByLibrary.simpleMessage("Play 2048 Game flutter")
   };
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_2048/service/gameInit.dart';
 import 'package:flutter_2048/store/game_state.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:flutter_2048/generated/l10n.dart';
 
 class Scores extends StatelessWidget {
   @override
@@ -50,7 +51,7 @@ class Scores extends StatelessWidget {
                       child: Column(
                         children: <Widget>[
                           Text(
-                            'SCORE',
+                            S.of(context).labelScore,
                             style: TextStyle(
                                 color: Color(0xffeee4da),
                                 fontWeight: FontWeight.bold),
@@ -74,7 +75,7 @@ class Scores extends StatelessWidget {
                       child: Column(
                         children: <Widget>[
                           Text(
-                            'BEST',
+                            S.of(context).labelBest,
                             style: TextStyle(
                                 color: Color(0xffeee4da),
                                 fontWeight: FontWeight.bold),
@@ -99,13 +100,13 @@ class Scores extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      'Play 2048 Game flutter',
+                      S.of(context).titleWelcome,
                       style: TextStyle(
                           color: Color(0xff776e65),
                           fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      'Join and get to the 2048 tile!',
+                      S.of(context).titleWelDesc,
                       style: TextStyle(color: Color(0xff776e65)),
                     ),
                   ],
@@ -115,7 +116,7 @@ class Scores extends StatelessWidget {
                   textColor: Colors.white,
                   onPressed: () => props.reset(),
                   child: Text(
-                    'New Game',
+                    S.of(context).btnNewGame,
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 )

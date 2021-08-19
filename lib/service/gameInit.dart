@@ -1,6 +1,6 @@
 import 'package:flutter_2048/reducers/updateState.dart';
-import 'package:flutter_2048/store/GameState.dart';
-import 'package:flutter_2048/model/GameStatus.dart';
+import 'package:flutter_2048/store/game_state.dart';
+import 'package:flutter_2048/model/game_status.dart';
 import 'package:redux/redux.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

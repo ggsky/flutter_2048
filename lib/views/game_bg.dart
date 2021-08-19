@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import '../store/GameState.dart';
-import '../utils/Screen.dart';
+import '../store/game_state.dart';
+import '../utils/screen.dart';
 /// 游戏格子背景
 class GameBg extends StatefulWidget {
   @override

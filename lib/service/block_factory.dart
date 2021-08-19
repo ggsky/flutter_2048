@@ -1,10 +1,10 @@
 import 'package:flutter/animation.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_2048/views/block/CombinBlock.dart';
-import 'package:flutter_2048/views/block/MoveBlock.dart';
-import 'package:flutter_2048/views/block/NewBlock.dart';
-import 'package:flutter_2048/views/block/StaticBlock.dart';
-import 'package:flutter_2048/model/BlockInfo.dart';
+import 'package:flutter_2048/views/block/combin_block.dart';
+import 'package:flutter_2048/views/block/move_block.dart';
+import 'package:flutter_2048/views/block/new_block.dart';
+import 'package:flutter_2048/views/block/static_block.dart';
+import 'package:flutter_2048/model/block_info.dart';
 
 class BlockFactory {
   AnimationController combinController;

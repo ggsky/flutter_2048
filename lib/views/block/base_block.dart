@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_2048/store/GameState.dart';
-import 'package:flutter_2048/utils/Screen.dart';
+import 'package:flutter_2048/store/game_state.dart';
+import 'package:flutter_2048/utils/screen.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 abstract class BaseBlock extends AnimatedWidget {

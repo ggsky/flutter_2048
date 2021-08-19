@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_2048/service/gameInit.dart';
-import 'package:flutter_2048/store/GameState.dart';
+import 'package:flutter_2048/store/game_state.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 class Scores extends StatelessWidget {

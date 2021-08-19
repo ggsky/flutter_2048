@@ -5,8 +5,8 @@ import '../reducers/moveDown.dart';
 import '../reducers/moveLeft.dart';
 import '../reducers/moveRight.dart';
 import '../reducers/moveUp.dart';
-import '../store/GameState.dart';
-import '../utils/Screen.dart';
+import '../store/game_state.dart';
+import '../utils/screen.dart';
 
 const pressTimeout = 200;
 const dragLength = 300;

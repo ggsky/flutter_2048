@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_2048/views/NumberText.dart';
-import 'package:flutter_2048/views/block/BaseBlock.dart';
-import 'package:flutter_2048/model/BlockInfo.dart';
+import 'package:flutter_2048/views/number_text.dart';
+import 'package:flutter_2048/views/block/base_block.dart';
+import 'package:flutter_2048/model/block_info.dart';
 
 double getBegin(BlockInfo info, int mode) {
   return (info.current % mode == info.before % mode

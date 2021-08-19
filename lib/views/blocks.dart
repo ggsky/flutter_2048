@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_2048/service/BlockFactory.dart';
-import 'package:flutter_2048/model/BlockInfo.dart';
-import 'package:flutter_2048/store/GameState.dart';
-import 'package:flutter_2048/utils/Screen.dart';
+import 'package:flutter_2048/service/block_factory.dart';
+import 'package:flutter_2048/model/block_info.dart';
+import 'package:flutter_2048/store/game_state.dart';
+import 'package:flutter_2048/utils/screen.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 class Blocks extends StatefulWidget {

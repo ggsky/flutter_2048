@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:flutter_2048/model/BlockInfo.dart';
-import 'package:flutter_2048/model/GameStatus.dart';
+import 'package:flutter_2048/model/block_info.dart';
+import 'package:flutter_2048/model/game_status.dart';
 
 class GameState {
   GameState({this.data, this.status, this.mode});

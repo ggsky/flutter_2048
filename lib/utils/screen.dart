@@ -1,5 +1,5 @@
-import '../model/Display.dart';
-import './Device.dart';
+import '../model/display.dart';
+import './device.dart';
 
 class Screen {
   /// 随着大小间距变化

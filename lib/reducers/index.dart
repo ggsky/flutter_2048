@@ -3,7 +3,7 @@ import './moveDown.dart';
 import './moveLeft.dart';
 import './moveRight.dart';
 import './moveUp.dart';
-import '../store/GameState.dart';
+import '../store/game_state.dart';
 import 'package:redux/redux.dart';
 
 final gameReducer = combineReducers<GameState>([

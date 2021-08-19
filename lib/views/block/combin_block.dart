@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_2048/views/NumberText.dart';
-import 'package:flutter_2048/views/block/BaseBlock.dart';
-import 'package:flutter_2048/views/block/MoveBlock.dart';
-import 'package:flutter_2048/model/BlockInfo.dart';
+import 'package:flutter_2048/views/number_text.dart';
+import 'package:flutter_2048/views/block/base_block.dart';
+import 'package:flutter_2048/views/block/move_block.dart';
+import 'package:flutter_2048/model/block_info.dart';
 
 class CombinBlock extends BaseBlock {
   final BlockInfo info;

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_2048/service/gameInit.dart';
-import 'package:flutter_2048/views/Blocks.dart';
-import 'package:flutter_2048/views/Scores.dart';
+import 'package:flutter_2048/views/blocks.dart';
+import 'package:flutter_2048/views/scores.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:redux/redux.dart';
 import 'package:redux_thunk/redux_thunk.dart';
-import '../views/GameBg.dart';
-import '../views/ModeSelector.dart';
-import '../views/Playground.dart';
-import '../model/Display.dart';
+import '../views/game_bg.dart';
+import '../views/mode_selector.dart';
+import '../views/playground.dart';
+import '../model/display.dart';
 import '../reducers/index.dart';
-import '../store/GameState.dart';
+import '../store/game_state.dart';
 
 /// 首页
 class IndexPage extends StatelessWidget {

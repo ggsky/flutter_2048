@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_2048/service/gameInit.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import '../store/GameState.dart';
+import '../store/game_state.dart';
 // 选择模式界面
 class ModeSelector extends StatelessWidget {
   @override

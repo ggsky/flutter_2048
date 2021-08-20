@@ -21,10 +21,10 @@ class GameState {
       block2 = random.nextInt(gamesize);
     }
 
-    var newdata = List<List<BlockInfo>>();
+    var newdata = <List<BlockInfo>>[];
 
     for (var i = 0; i < mode; i++) {
-      var row = List<BlockInfo>();
+      var row = <BlockInfo>[];
       for (var j = 0; j < mode; j++) {
         var current = i * mode + j;
         row.add(BlockInfo(
@@ -129,9 +129,9 @@ class GameState {
   }
 
   GameState clone() {
-    var newdata = List<List<BlockInfo>>();
+    var newdata = <List<BlockInfo>>[];
     for (var i = 0; i < mode; i++) {
-      var row = List<BlockInfo>();
+      var row = <BlockInfo>[];
       for (var j = 0; j < mode; j++) {
         row.add(BlockInfo(
           current: data[i][j].current,

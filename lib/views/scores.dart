@@ -111,9 +111,7 @@ class Scores extends StatelessWidget {
                     ),
                   ],
                 ),
-                FlatButton(
-                  color: Color(0xff8f7a66),
-                  textColor: Colors.white,
+                TextButton(
                   onPressed: () => props.reset(),
                   child: Text(
                     S.of(context).btnNewGame,

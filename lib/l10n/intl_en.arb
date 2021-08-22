@@ -1,0 +1,8 @@
+{
+    "titleName": "2048",
+    "titleWelcome": "Play 2048 Game flutter",
+    "titleWelDesc": "Join and get to the 2048 tile!",
+    "labelBest": "BEST",
+    "labelScore": "SCORE",
+    "btnNewGame": "New Game"
+}

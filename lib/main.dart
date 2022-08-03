@@ -32,7 +32,7 @@ class _GameAppState extends State<GameApp> {
           left: false,
           right: false,
           child: Stack(
-            children: <Widget>[
+            children: [
               IndexPage(),
             ],
           ),

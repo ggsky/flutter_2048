@@ -26,7 +26,7 @@ class CombinBlock extends BaseBlock {
     Animation<double> animation = listenable;
     return Stack(
       fit: StackFit.expand,
-      children: <Widget>[
+      children: [
         MoveBlock(
           info: BlockInfo(
             isNew: false,

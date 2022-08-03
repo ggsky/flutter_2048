@@ -18,7 +18,7 @@ class ModeSelector extends StatelessWidget {
         return Container(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
+            children: [
               TextButton(
                 onPressed: () => vm.onChange(3),
                 child: Text('3 x 3'),

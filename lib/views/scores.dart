@@ -26,10 +26,10 @@ class Scores extends StatelessWidget {
       builder: (context, props) {
         return Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
+          children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
+              children: [
                 Text(
                   '2048',
                   style: TextStyle(
@@ -39,7 +39,7 @@ class Scores extends StatelessWidget {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
+                  children: [
                     Container(
                       padding: EdgeInsets.fromLTRB(23, 5, 23, 5),
                       margin: EdgeInsets.only(right: 5),
@@ -49,7 +49,7 @@ class Scores extends StatelessWidget {
                         borderRadius: BorderRadius.circular(5),
                       ),
                       child: Column(
-                        children: <Widget>[
+                        children: [
                           Text(
                             S.of(context).labelScore,
                             style: TextStyle(
@@ -73,7 +73,7 @@ class Scores extends StatelessWidget {
                         borderRadius: BorderRadius.circular(5),
                       ),
                       child: Column(
-                        children: <Widget>[
+                        children: [
                           Text(
                             S.of(context).labelBest,
                             style: TextStyle(
@@ -95,10 +95,10 @@ class Scores extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
+              children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
+                  children: [
                     Text(
                       S.of(context).titleWelcome,
                       style: TextStyle(

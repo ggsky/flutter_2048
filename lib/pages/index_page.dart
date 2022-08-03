@@ -46,11 +46,11 @@ class IndexPage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: <Widget>[
+                    children: [
                       ModeSelector(),
                       Scores(),
                       Stack(
-                        children: <Widget>[
+                        children: [
                           GameBg(),
                           Blocks(),
                           Playground(),

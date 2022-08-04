@@ -85,10 +85,10 @@ class S {
     );
   }
 
-  /// `New Game`
+  /// `Game`
   String get btnNewGame {
     return Intl.message(
-      'New Game',
+      'Game',
       name: 'btnNewGame',
       desc: '',
       args: [],

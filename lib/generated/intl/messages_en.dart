@@ -12,7 +12,7 @@
 import 'package:intl/intl.dart';
 import 'package:intl/message_lookup_by_library.dart';
 
-final messages = new MessageLookup();
+final messages = MessageLookup();
 
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
@@ -21,7 +21,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
-    "btnNewGame" : MessageLookupByLibrary.simpleMessage("New Game"),
+    "btnNewGame" : MessageLookupByLibrary.simpleMessage("Game"),
     "labelBest" : MessageLookupByLibrary.simpleMessage("BEST"),
     "labelScore" : MessageLookupByLibrary.simpleMessage("SCORE"),
     "titleName" : MessageLookupByLibrary.simpleMessage("2048"),

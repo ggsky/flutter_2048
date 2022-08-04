@@ -12,7 +12,7 @@ class GameState {
 
   /// 初始化
   static GameState initial(int mode) {
-    var random = new Random(DateTime.now().millisecondsSinceEpoch);
+    var random = Random(DateTime.now().millisecondsSinceEpoch);
     var gamesize = mode * mode;
     var block1 = random.nextInt(gamesize);
     var block2 = random.nextInt(gamesize);
@@ -55,7 +55,7 @@ class GameState {
     for (var i = 0; i < mode; i++) {
       for (var j = 0; j < mode; j++) {
         var block = getBlock(i, j);
-        block.isNew = false;
+        block.is= false;
         if (block.value == 0) {
           count++;
         }
@@ -65,13 +65,13 @@ class GameState {
     // 有空格
     if (count > 0) {
       // 生成新的数字
-      var random = new Random(DateTime.now().millisecondsSinceEpoch);
+      var random = Random(DateTime.now().millisecondsSinceEpoch);
       var newpos = getBlankPosition(random.nextInt(count));
 
       var newblock = getBlock(newpos ~/ mode, newpos % mode);
       newblock.value = (random.nextInt(2) + 1) * 2;
       newblock.before = newblock.current = newpos;
-      newblock.isNew = true;
+      newblock.is= true;
       newblock.needCombine = newblock.needMove = false;
     }
 

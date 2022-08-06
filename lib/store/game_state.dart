@@ -55,7 +55,7 @@ class GameState {
     for (var i = 0; i < mode; i++) {
       for (var j = 0; j < mode; j++) {
         var block = getBlock(i, j);
-        block.is= false;
+        block.myis= false;
         if (block.value == 0) {
           count++;
         }
@@ -71,7 +71,7 @@ class GameState {
       var newblock = getBlock(newpos ~/ mode, newpos % mode);
       newblock.value = (random.nextInt(2) + 1) * 2;
       newblock.before = newblock.current = newpos;
-      newblock.is= true;
+      newblock.myis = true;
       newblock.needCombine = newblock.needMove = false;
     }
 
@@ -136,7 +136,7 @@ class GameState {
         row.add(BlockInfo(
           current: data[i][j].current,
           value: data[i][j].value,
-          isNew: false,
+          myis: false,
         ));
       }
       newdata.add(row);

@@ -29,7 +29,7 @@ class CombinBlock extends BaseBlock {
       children: [
         MoveBlock(
           info: BlockInfo(
-            isNew: false,
+            myis: false,
             value: info.value ~/ 2,
             before: info.before,
             current: info.current,

@@ -128,7 +128,7 @@ class Scores extends StatelessWidget {
 }
 
 class ScoresProps {
-  ScoresProps({this.mode, this.total, this.scores, this.isEnd, this.reset});
+  ScoresProps({required this.mode, required this.total, required this.scores, required this.isEnd, required this.reset});
 
   int mode;
   int total;

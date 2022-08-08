@@ -10,11 +10,11 @@ class CombinBlock extends BaseBlock {
   final AnimationController moveController;
 
   CombinBlock({
-    Key key,
-    this.info,
-    this.mode,
-    this.moveController,
-    AnimationController combinController,
+    Key? key,
+    required this.info,
+    required this.mode,
+    required this.moveController,
+    required AnimationController combinController,
   }) : super(
           key: key,
           animation:

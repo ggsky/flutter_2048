@@ -1,5 +1,9 @@
 class BlockInfo {
-  BlockInfo({this.value, this.current, this.before, this.myis = true}) {
+  BlockInfo(
+      {required this.value,
+      required this.current,
+      this.before,
+      this.myis = true}) {
     this.before = this.before == null ? this.current : this.before;
   }
 

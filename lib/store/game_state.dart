@@ -4,7 +4,7 @@ import 'package:flutter_2048/model/block_info.dart';
 import 'package:flutter_2048/model/game_status.dart';
 
 class GameState {
-  GameState({this.data, this.status, this.mode});
+  GameState({required this.data, required this.status, required this.mode});
 
   int mode;
   GameStatus status;

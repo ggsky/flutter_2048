@@ -1,11 +1,11 @@
 /// 当前状态
 class GameStatus {
   GameStatus({
-    this.adds,
+    required this.adds,
     this.moves,
-    this.scores,
-    this.total,
-    this.end,
+    required this.scores,
+    required this.total,
+    required this.end,
   });
 
   int scores;

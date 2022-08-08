@@ -4,7 +4,7 @@ import 'package:flutter_2048/utils/screen.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
 abstract class BaseBlock extends AnimatedWidget {
-  BaseBlock({Key key, Animation animation})
+  BaseBlock({Key? key, required Animation animation})
       : super(
           key: key,
           listenable: animation,
@@ -34,5 +34,5 @@ class BlockProps {
   double borderWidth;
   int mode;
 
-  BlockProps({this.blockWidth, this.borderWidth, this.mode});
+  BlockProps({required this.blockWidth, required this.borderWidth, required this.mode});
 }

@@ -8,9 +8,9 @@ class StaticBlock extends BaseBlock {
   final BlockInfo info;
 
   StaticBlock({
-    Key key,
-    this.info,
-    AnimationController controller,
+    Key? key,
+    required this.info,
+    required AnimationController controller,
   }) : super(
           key: key,
           animation:

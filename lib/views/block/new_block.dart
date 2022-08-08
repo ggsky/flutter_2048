@@ -7,9 +7,9 @@ class NewBlock extends BaseBlock {
   final BlockInfo info;
 
   NewBlock({
-    Key key,
-    this.info,
-    AnimationController controller,
+    Key? key,
+    required this.info,
+    required AnimationController controller,
   }) : super(
           key: key,
           animation: Tween<double>(begin: 0.1, end: 1.0).animate(controller),

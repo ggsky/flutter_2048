@@ -1,17 +1,20 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SpUtil {
-  static Future<SharedPreferences> sharedPreferences = SharedPreferences.getInstance();
+  static Future<SharedPreferences> sharedPreferences =
+      SharedPreferences.getInstance();
 
-  static Future<T> get<T>(String key) {
-    key ??= '';
+  static Future<T> get<T>(String key, T defaultValue) {
     return sharedPreferences.then((s) {
-      return s.get(key) as T;
+      if (s.get(key) == null) {
+        return defaultValue;
+      } else {
+        return s.get(key) as T;
+      }
     });
   }
 
   static Future<bool> save<T>(String key, T value) async {
-    key ??= '';
     return sharedPreferences.then((s) {
       if (value == null) {
         return s.remove(key);
@@ -37,7 +40,6 @@ class SpUtil {
   }
 
   static Future<bool> remove(String key) {
-    key ??= '';
     return sharedPreferences.then((s) {
       return s.remove(key);
     });

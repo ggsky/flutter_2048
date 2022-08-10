@@ -2,7 +2,7 @@
 class GameStatus {
   GameStatus({
     required this.adds,
-    this.moves,
+    required this.moves,
     required this.scores,
     required this.total,
     required this.end,

@@ -1,1 +1,1 @@
-FROM jianboy/flutter-dev-container:2.10.5
+FROM jianboy/flutter-dev-container:3.0.5

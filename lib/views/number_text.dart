@@ -4,7 +4,7 @@ class BlockStyle {
   Color textColor;
   Color background;
 
-  BlockStyle({this.textColor, this.background});
+  BlockStyle({required this.textColor, required this.background});
 }
 
 var styles = Map.fromEntries([
@@ -36,7 +36,7 @@ class NumberText extends StatelessWidget {
   final int value;
   final double size;
 
-  NumberText({this.value, this.size});
+  NumberText({required this.value, required this.size});
 
   @override
   Widget build(BuildContext context) {
@@ -57,8 +57,8 @@ class NumberText extends StatelessWidget {
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: (this.value ~/ 2048) > 1
-                ? styles[this.value ~/ 2048].textColor
-                : styles[this.value].textColor,
+                ? styles[this.value ~/ 2048]?.textColor
+                : styles[this.value]?.textColor,
             fontSize:
                 size / (numberText.length <= 2 ? 2 : numberText.length * 0.8),
           ),

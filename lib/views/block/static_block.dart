@@ -8,13 +8,13 @@ class StaticBlock extends BaseBlock {
   final BlockInfo info;
 
   StaticBlock({
-    Key key,
-    this.info,
-    AnimationController controller,
+    Key? key,
+    required this.info,
+    required AnimationController controller,
   }) : super(
           key: key,
           animation:
-              new Tween<double>(begin: 0.0, end: 0.0).animate(controller),
+              Tween<double>(begin: 0.0, end: 0.0).animate(controller),
         );
 
   @override

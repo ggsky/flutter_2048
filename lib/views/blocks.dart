@@ -56,5 +56,5 @@ class BlocksProps {
   double padding;
   List<List<BlockInfo>> data;
 
-  BlocksProps({this.padding, this.mode, this.data});
+  BlocksProps({required this.padding, required this.mode, required this.data});
 }

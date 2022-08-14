@@ -71,5 +71,5 @@ class GameBgProps {
   double blockWidth; //块大小
   int mode; //游戏模式，3*3 4*4 6*6
 
-  GameBgProps({this.borderWidth, this.blockWidth, this.mode});
+  GameBgProps({required this.borderWidth, required this.blockWidth, required this.mode});
 }

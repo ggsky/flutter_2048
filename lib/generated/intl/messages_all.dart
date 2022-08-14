@@ -20,8 +20,8 @@ import 'messages_zh.dart' as messages_zh;
 
 typedef Future<dynamic> LibraryLoader();
 Map<String, LibraryLoader> _deferredLibraries = {
-  'en': () => new Future.value(null),
-  'zh': () => new Future.value(null),
+  'en': () => Future.value(null),
+  'zh': () => Future.value(null),
 };
 
 MessageLookupByLibrary _findExact(String localeName) {
@@ -42,13 +42,13 @@ Future<bool> initializeMessages(String localeName) async {
     (locale) => _deferredLibraries[locale] != null,
     onFailure: (_) => null);
   if (availableLocale == null) {
-    return new Future.value(false);
+    return Future.value(false);
   }
   var lib = _deferredLibraries[availableLocale];
-  await (lib == null ? new Future.value(false) : lib());
-  initializeInternalMessageLookup(() => new CompositeMessageLookup());
+  await (lib == null ? Future.value(false) : lib());
+  initializeInternalMessageLookup(() => CompositeMessageLookup());
   messageLookup.addLocale(availableLocale, _findGeneratedMessagesFor);
-  return new Future.value(true);
+  return Future.value(true);
 }
 
 bool _messagesExistFor(String locale) {

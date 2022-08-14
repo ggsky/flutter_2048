@@ -1,19 +1,27 @@
 class BlockInfo {
-  BlockInfo({this.value, this.current, this.before, this.isNew = true}) {
-    this.before = this.before == null ? this.current : this.before;
+  BlockInfo(
+      {required this.value,
+      required this.current,
+      this.before ,
+      this.myis = true}) {
+    if (this.before == null) {
+      this.before = this.current;
+    } else {
+      this.before = this.before;
+    }
   }
 
   int value;
   int current;
-  int before;
+  int? before;
   bool needMove = false;
   bool needCombine = false;
-  bool isNew = false;
+  bool myis = false;
 
   void reset() {
     value = 0;
     needMove = false;
     needCombine = false;
-    isNew = false;
+    myis = false;
   }
 }

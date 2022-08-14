@@ -6,17 +6,15 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 void main() => runApp(GameApp());
 
 class GameApp extends StatefulWidget {
-  
   @override
   State<StatefulWidget> createState() => _GameAppState();
 }
 
 class _GameAppState extends State<GameApp> {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        localizationsDelegates: [
+      localizationsDelegates: [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
@@ -31,11 +29,7 @@ class _GameAppState extends State<GameApp> {
         child: SafeArea(
           left: false,
           right: false,
-          child: Stack(
-            children: [
-              IndexPage(),
-            ],
-          ),
+          child: IndexPage(),
         ),
       ),
     );

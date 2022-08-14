@@ -9,8 +9,7 @@ gameInit(Store<GameState> store, int mode) async {
 
   var key = 'total_' + mode.toString();
 
-  if (store.state.status.total != null &&
-      store.state.status.scores > store.state.status.total) {
+  if (store.state.status.scores > store.state.status.total) {
     prefs.setInt(key, store.state.status.scores);
   }
   var state = GameState.initial(mode);

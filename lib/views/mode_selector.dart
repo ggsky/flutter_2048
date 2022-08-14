@@ -40,7 +40,7 @@ class ModeSelector extends StatelessWidget {
 }
 
 class ModeSelectorProps {
-  ModeSelectorProps({this.mode, this.onChange});
+  ModeSelectorProps({required this.mode, required this.onChange});
 
   int mode;
   Function onChange;

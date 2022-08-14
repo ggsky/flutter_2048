@@ -16,10 +16,10 @@ class MoveBlock extends BaseBlock {
   final int mode;
 
   MoveBlock({
-    Key key,
-    this.info,
-    this.mode,
-    AnimationController controller,
+    Key? key,
+    required this.info,
+    required this.mode,
+    required AnimationController controller,
   }) : super(
           key: key,
           animation: Tween<double>(begin: getBegin(info, mode), end: 0)

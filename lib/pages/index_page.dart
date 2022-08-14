@@ -16,7 +16,6 @@ import '../store/game_state.dart';
 
 /// 首页
 class IndexPage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     //ScreenUtil 初始化实例
@@ -25,7 +24,7 @@ class IndexPage extends StatelessWidget {
             maxWidth: MediaQuery.of(context).size.width,
             maxHeight: MediaQuery.of(context).size.height),
         designSize: Size(360, 640),
-        orientation: Orientation.portrait);  // 竖屏
+        orientation: Orientation.portrait); // 竖屏
 
     return StoreProvider(
       store: Store<GameState>(
@@ -69,5 +68,5 @@ class IndexPage extends StatelessWidget {
 class GameProps {
   bool started;
 
-  GameProps({this.started});
+  GameProps({required this.started});
 }

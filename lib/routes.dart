@@ -1,15 +1,16 @@
 import 'package:flutter/cupertino.dart';
 
 class Routes {
-  static final Router router = new Router(
+  static const ROOT = '/';
+
+  static final Router router = Router(
     routerDelegate: null,
   );
-  static const ROOT = '/';
   static Routes _instance;
 
   static Routes get instance {
     if (_instance == null) {
-      _instance = new Routes();
+      _instance = Routes();
     }
     return _instance;
   }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import '../reducers/moveDown.dart';
 import '../reducers/moveLeft.dart';
@@ -80,9 +79,9 @@ class Playground extends StatelessWidget {
   void onVerticalDragEnd(DragEndDetails evt, PlaygroundProps props) {
     if (DateTime.now().millisecondsSinceEpoch - props.startTime >
             pressTimeout ||
-        evt.primaryVelocity.abs() < dragLength) return;
+        evt.primaryVelocity!.abs() < dragLength) return;
     // 是否ios和android纵轴是相反的？
-    if (evt.primaryVelocity < 0) {
+    if (evt.primaryVelocity! < 0) {
       props.onUp();
     } else {
       props.onDown();
@@ -100,12 +99,12 @@ class PlaygroundProps {
   Function onDown;
 
   PlaygroundProps({
-    this.end,
-    this.mode,
-    this.startTime,
-    this.onDown,
-    this.onLeft,
-    this.onRight,
-    this.onUp,
+    required this.end,
+    required this.mode,
+    required this.startTime,
+    required this.onDown,
+    required this.onLeft,
+    required this.onRight,
+    required this.onUp,
   });
 }

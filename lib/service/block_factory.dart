@@ -1,4 +1,3 @@
-import 'package:flutter/animation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_2048/views/block/combin_block.dart';
 import 'package:flutter_2048/views/block/move_block.dart';
@@ -23,7 +22,7 @@ class BlockFactory {
   }
 
   Widget create(BlockInfo info) {
-    if (info.isNew) {
+    if (info.myis) {
       return NewBlock(
         info: info,
         controller: this.addController,

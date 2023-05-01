@@ -1,5 +1,6 @@
 /// 当前状态
 class GameStatus {
+  
   GameStatus({
     required this.adds,
     required this.moves,

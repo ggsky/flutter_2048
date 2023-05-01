@@ -2,6 +2,7 @@ import '../model/display.dart';
 import './device.dart';
 
 class Screen {
+  
   /// 随着大小间距变化
   static double getBorderWidth(int gameType) {
     return Display.spacerUnit / gameType * Display.borderMargin;

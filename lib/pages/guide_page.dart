@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 /// Time       : 04/30/2023 Sunday
 /// Author     : liuyuqi.gov@msn.cn
 class GuidePage extends StatefulWidget {
-  GuidePage({Key key}) : super(key: key);
+  GuidePage({Key? key}) : super(key: key);
 
   @override
   _GuidePageState createState() => _GuidePageState();
@@ -14,7 +14,7 @@ class _GuidePageState extends State<GuidePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-       child: child,
+      child: ,
     );
   }
 }

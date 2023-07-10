@@ -15,7 +15,7 @@ class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-       child: Text("xx"),
+       child: Text("About Me"),
     );
   }
 }

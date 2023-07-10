@@ -18,8 +18,7 @@ import '../store/game_state.dart';
 class IndexPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //ScreenUtil 初始化实例
-    ScreenUtil.init(context, designSize: Size(360, 640)); // 竖屏
+    ScreenUtil.init(context, designSize: Size(360, 640));
 
     return StoreProvider(
       store: Store<GameState>(

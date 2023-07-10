@@ -10,7 +10,7 @@ class BlockInfo {
   BlockInfo(
       {required this.value,
       required this.current,
-      this.before,
+      required this.before,
       this.myis = true}) {
     if (this.before == null) {
       this.before = this.current;
@@ -21,7 +21,7 @@ class BlockInfo {
 
   int value;
   int current;
-  int? before;
+  int before;
   bool needMove = false;
   bool needCombine = false;
   bool myis = false;

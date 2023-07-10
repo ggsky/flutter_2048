@@ -17,7 +17,7 @@ class NewBlock extends BaseBlock {
 
   @override
   Widget buildBlock(BuildContext context, BlockProps props) {
-    Animation<double> animation = listenable;
+    Animation<double> animation = listenable as Animation<double>;
     return Positioned(
       top:
           (info.current ~/ props.mode) * (props.blockWidth + props.borderWidth),

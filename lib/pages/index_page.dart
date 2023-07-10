@@ -19,12 +19,7 @@ class IndexPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //ScreenUtil 初始化实例
-    ScreenUtil.init(
-        BoxConstraints(
-            maxWidth: MediaQuery.of(context).size.width,
-            maxHeight: MediaQuery.of(context).size.height),
-        designSize: Size(360, 640),
-        orientation: Orientation.portrait); // 竖屏
+    ScreenUtil.init(context, designSize: Size(360, 640)); // 竖屏
 
     return StoreProvider(
       store: Store<GameState>(

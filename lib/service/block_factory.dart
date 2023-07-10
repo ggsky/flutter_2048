@@ -6,10 +6,10 @@ import 'package:flutter_2048/views/block/static_block.dart';
 import 'package:flutter_2048/model/block_info.dart';
 
 class BlockFactory {
-  AnimationController combinController;
-  AnimationController addController;
-  AnimationController moveController;
-  int _mode;
+  late AnimationController combinController;
+  late AnimationController addController;
+  late AnimationController moveController;
+  int _mode = 0;
 
   BlockFactory(TickerProvider provider, int mode) {
     combinController = AnimationController(

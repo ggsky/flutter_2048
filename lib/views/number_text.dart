@@ -46,8 +46,8 @@ class NumberText extends StatelessWidget {
       height: size,
       decoration: BoxDecoration(
         color: (this.value ~/ 2048) > 1
-            ? styles[this.value ~/ 2048].background
-            : styles[this.value].background,
+            ? styles[this.value ~/ 2048]!.background
+            : styles[this.value]!.background,
         border: Border.all(color: Colors.transparent, width: 0),
         borderRadius: BorderRadius.circular(5),
       ),

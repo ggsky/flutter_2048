@@ -28,7 +28,7 @@ class MoveBlock extends BaseBlock {
 
   @override
   Widget buildBlock(BuildContext context, BlockProps props) {
-    Animation<double> animation = listenable;
+    Animation<double> animation = listenable as Animation<double>;
     var direction = info.current % mode == info.before % mode ? 1 : 0;
     return Positioned(
       top:

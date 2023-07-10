@@ -67,9 +67,9 @@ class Playground extends StatelessWidget {
   void onHorizontalDragEnd(DragEndDetails evt, PlaygroundProps props) {
     if (DateTime.now().millisecondsSinceEpoch - props.startTime >
             pressTimeout ||
-        evt.primaryVelocity.abs() < dragLength) return;
+        evt.primaryVelocity!.abs() < dragLength) return;
 
-    if (evt.primaryVelocity > 0) {
+    if (evt.primaryVelocity! > 0) {
       props.onRight();
     } else {
       props.onLeft();

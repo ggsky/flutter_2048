@@ -28,6 +28,7 @@ class GameState {
       for (var j = 0; j < mode; j++) {
         var current = i * mode + j;
         row.add(BlockInfo(
+            before: current,
             value: current == block1 || current == block2 ? 2 : 0,
             current: current));
       }
@@ -36,11 +37,7 @@ class GameState {
 
     return GameState(
       mode: mode,
-      status: GameStatus(
-        end: false,
-        scores: 0,
-        total: null,
-      ),
+      status: GameStatus(end: false, scores: 0, total: 0, adds: 0, moves: 0),
       data: newdata,
     );
   }
@@ -55,7 +52,7 @@ class GameState {
     for (var i = 0; i < mode; i++) {
       for (var j = 0; j < mode; j++) {
         var block = getBlock(i, j);
-        block.myis= false;
+        block.myis = false;
         if (block.value == 0) {
           count++;
         }
@@ -137,6 +134,7 @@ class GameState {
           current: data[i][j].current,
           value: data[i][j].value,
           myis: false,
+          before: data[i][j].before,
         ));
       }
       newdata.add(row);
@@ -145,15 +143,13 @@ class GameState {
     return GameState(
       data: newdata,
       mode: this.mode,
-      status: this.status == null
-          ? null
-          : GameStatus(
-              adds: this.status.adds,
-              end: this.status.end,
-              moves: this.status.moves,
-              scores: this.status.scores,
-              total: this.status.total,
-            ),
+      status: GameStatus(
+        adds: this.status.adds,
+        end: this.status.end,
+        moves: this.status.moves,
+        scores: this.status.scores,
+        total: this.status.total,
+      ),
     );
   }
 }

@@ -14,7 +14,7 @@ class Scores extends StatelessWidget {
         isEnd: store.state.status.end,
         reset: () {
           gameInit(store, store.state.mode);
-        },
+        }, mode: store.state.mode,
       ),
       // onDidChange: (props) {
       //   if (props.isEnd && props.scores > props.total) {

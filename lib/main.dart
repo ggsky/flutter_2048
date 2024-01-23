@@ -2,8 +2,18 @@ import 'package:flutter/material.dart';
 import 'pages/index_page.dart';
 import 'generated/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(GameApp());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(GameApp());
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+    statusBarIconBrightness: Brightness.dark,
+    systemNavigationBarColor: Colors.transparent,
+    systemNavigationBarIconBrightness: Brightness.dark,
+  ));
+}
 
 class GameApp extends StatefulWidget {
   @override

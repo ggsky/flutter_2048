@@ -30,8 +30,8 @@ android {
         release {
             storeFile file("sign/flutter_2048.jks")
             keyAlias "key0"
-            keyPassword "bKAwkX_YkTO7"
-            storePassword "bKAwkX_YkTO7"
+            keyPassword "VsEZj9QW"
+            storePassword "VsEZj9QW"
         }
     }
     lintOptions {

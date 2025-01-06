@@ -51,7 +51,9 @@ jobs:
 
       - name: Build apk
         if: ${{ runner.os == 'Linux' }}
-        run: flutter build apk --debug --split-per-abi
+        run: |
+          flutter build apk --debug --split-per-abi
+          flutter build web
 
       - name: Build ios
         if: ${{ runner.os == 'macOS' }}
@@ -75,3 +77,9 @@ jobs:
             build/ios/**/*.ipa
             build/web/web-app.zip
 
+      - name: github pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ runner.os == 'Linux' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web
